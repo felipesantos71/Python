@@ -5,4 +5,4 @@ print("\n== Números Pares==")
 
 for i in range(100,121):
     if i%2 == 0:
-        print(f"Numero: {i}")
+        print(f"Numero par: {i}")
