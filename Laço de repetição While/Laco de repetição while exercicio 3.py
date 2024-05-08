@@ -1,10 +1,10 @@
 import os
 os.system("cls || clear")
 
-print("\n== While nota com média ==")
+print("\n== While nota com média e Aprovação ==")
 
 soma = 0
-QUANTIDADE_NOTAS = 2
+QUANTIDADE_NOTAS = 3
 
 for i in range(QUANTIDADE_NOTAS):
     while True:
@@ -19,3 +19,9 @@ for i in range(QUANTIDADE_NOTAS):
 media = soma / QUANTIDADE_NOTAS
 print(f"Sua média: {media}")
 
+if(media>=7):
+    print(f"Aprovado!")
+elif(media>=4):
+    print(f"Recuperação!")
+else:
+    print(f"Reprovado!")
