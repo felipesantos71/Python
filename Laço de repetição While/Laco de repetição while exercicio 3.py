@@ -17,11 +17,13 @@ for i in range(QUANTIDADE_NOTAS):
             break
         
 media = soma / QUANTIDADE_NOTAS
-print(f"Sua média: {media}")
 
 if(media>=7):
-    print(f"Aprovado!")
+    resultado = "Aprovado!"
 elif(media>=5):
-    print(f"Recuperação!")
+    resultado = "Recuperação!"
 else:
-    print(f"Reprovado!")
+    resultado = "Reprovado!"
+
+print(f"Sua média: {media}")
+print(f"Situação do aluno: {resultado}")

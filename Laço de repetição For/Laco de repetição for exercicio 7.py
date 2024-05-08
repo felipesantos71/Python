@@ -3,20 +3,23 @@ os.system("cls || clear")
 
 print("\n== Média de 3 notas e Aprovação ==")
 
+QUANTIDADE_NOTAS = 3
 media = 0
 soma = 0
 
-for i in range(3):
+for i in range(QUANTIDADE_NOTAS):
     nota = float(input(f"Digite a {i+1}ª nota: "))
     soma+=nota
 
 
-media = soma/3
-print(f"Sua média total é: {media}")
+media = soma/QUANTIDADE_NOTAS
 
 if(media>=7):
-    print(f"Aprovado!")
-elif(media>=4):
-    print(f"Recuperação!")
+    resultado = "Aprovado!"
+elif(media>=5):
+    resultado = "Recuperação!"
 else:
-    print(f"Reprovado!")
+    resultado = "Reprovado!"
+
+print(f"Sua média: {media}")
+print(f"Situação do aluno: {resultado}")
