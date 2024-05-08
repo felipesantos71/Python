@@ -2,6 +2,7 @@ import os
 os.system("\n== Cardápio ==")
 
 dia = ""
+tipoDia = ""
 
 operacao = int(input(f"Digite um número de 1 a 7 para saber o dia da semana :" ))
 
@@ -23,9 +24,10 @@ match operacao:
     case _:
         print(f"Seleção inválida!")
 
-print(f"Prato escolhidos: {dia}")
-
 if dia == "Domingo" or dia == "Sábado":
-    print(f"Final de semana!")
+    tipoDia = "Final de Semana"
 else:
-    print(f"Dia útil!")
+    tipoDia = "Dia útil"
+
+print(f"Dia da semana: {dia}")
+print(f"É um: {tipoDia}")
