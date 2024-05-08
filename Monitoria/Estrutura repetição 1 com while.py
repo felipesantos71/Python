@@ -12,4 +12,3 @@ while True:
         break
     else:
         print(f"Login e senha inválidos tente novamente!")
-   
