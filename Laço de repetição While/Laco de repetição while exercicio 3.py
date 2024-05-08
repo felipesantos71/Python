@@ -21,7 +21,7 @@ print(f"Sua média: {media}")
 
 if(media>=7):
     print(f"Aprovado!")
-elif(media>=4):
+elif(media>=5):
     print(f"Recuperação!")
 else:
     print(f"Reprovado!")
