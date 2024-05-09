@@ -1,4 +1,5 @@
 import os
+import time
 os.system("clear || cls")
 
 print("\n== Média e números inteiros ==")
@@ -12,9 +13,12 @@ while True:
     if nota > 0:
         contador+=1
         soma+=nota
+        time.sleep(2)
     else:
         if contador==0:
-            print("Digite novamente: ")
+            print("Digite novamente.")
+            time.sleep(2)
+            os.system("clear")
         else:
             break    
 
