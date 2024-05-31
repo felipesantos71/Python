@@ -33,7 +33,7 @@ while True:
             dia = "Sábado"
             break
         case _:
-            print(f"Seleção inválida!")
+            print("")
 
 if dia == "Domingo" or dia == "Sábado":
     tipoDia = "Final de Semana"

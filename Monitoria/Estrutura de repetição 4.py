@@ -39,7 +39,7 @@ while True:
             valor = 5.00
             break
         case _:
-            print(f"Operação inválida!")
+            print("")
             
 os.system("clear || cls")
 print(f"Prato escolhidos: {prato}")
