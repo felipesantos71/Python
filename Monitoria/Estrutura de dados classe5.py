@@ -1,0 +1,1 @@
+print(f"Nome do mascote: {i.nome}")
