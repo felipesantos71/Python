@@ -73,7 +73,8 @@ def calculoRefeicao(salario):
 def calculoSaude(salario):
     if dependentes == 'S':
         descontoplanoSaude = 150
-        descontosaudeTotal = descontoplanoSaude*quantidadeDependentes
+        descontoDependente = descontoplanoSaude*quantidadeDependentes
+        descontosaudeTotal = descontoDependente + descontoplanoSaude
     else:
         descontosaudeTotal = 150
     return descontosaudeTotal
