@@ -36,7 +36,7 @@ def calculoInss(salario):
     return descontoInss
     
 #calculo irrf
-def calculoIrrf(salario):
+def calculoIrrf(salario, quantidadeDependentes):
     if salario <= 2259.20:
         descontoIrrf = 0
         descontoirrfTotal = 0
@@ -65,12 +65,12 @@ def calculoTransporte(salario):
     return descontoVale
     
 #calculo do vale refeição
-def calculoRefeicao(salario):
+def calculoRefeicao(valeRefeicao):
     descontoRefeicao = valeRefeicao*0.2
     return descontoRefeicao
     
 #calculo do plano de saude
-def calculoSaude(salario):
+def calculoSaude(quantidadeDependentes):
     if dependentes == 'S':
         descontoplanoSaude = 150
         descontoDependente = descontoplanoSaude*quantidadeDependentes
@@ -119,18 +119,18 @@ while True:
         
 #calculo de descontos totais
 if confirmarVale == 'S':
-    descontoTotal = calculoInss(salario)+calculoIrrf(salario)+calculoTransporte(salario)+calculoRefeicao(salario)+calculoSaude(salario)
+    descontoTotal = calculoInss(salario)+calculoIrrf(salario, quantidadeDependentes)+calculoTransporte(salario)+calculoRefeicao(valeRefeicao)+calculoSaude(quantidadeDependentes)
 else:
-    descontoTotal = calculoInss(salario)+calculoIrrf(salario)+calculoRefeicao(salario)+calculoSaude(salario)
+    descontoTotal = calculoInss(salario)+calculoIrrf(salario, quantidadeDependentes)+calculoRefeicao(valeRefeicao)+calculoSaude(quantidadeDependentes)
 salarioLiquido = salario - descontoTotal
 
 #apresentando dados ao usuário
 cabecalho()
 print(f"Salário bruto: {salario}")
 print(f"Desconto Inss: {round(calculoInss(salario), 2)}")
-print(f"Desconto Irrf: {round(calculoIrrf(salario), 2)}")
+print(f"Desconto Irrf: {round(calculoIrrf(salario, quantidadeDependentes), 2)}")
 if confirmarVale == 'S':
     print(f"Desconto transporte: {round(calculoTransporte(salario), 2)}")
-print(f"Desconto vale refeição: {round(calculoRefeicao(salario), 2)}")
-print(f"Desconto plano de saúde: {round(calculoSaude(salario), 2)}")
+print(f"Desconto vale refeição: {round(calculoRefeicao(valeRefeicao), 2)}")
+print(f"Desconto plano de saúde: {round(calculoSaude(quantidadeDependentes), 2)}")
 print(f"Sálario líquido: {round(salarioLiquido, 2)}")
